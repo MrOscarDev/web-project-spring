@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+	<!-- <bean id="disqueraServiceImpl" class="com.devlaros.spring_project.dao.DisqueraServiceImpl"> 
+		</bean> -->
+<!--  Sirve para poder usar anotaciones de Sdpring y la segunda etiqueta para indicarle que paquetes si usaran etiqutas-->
+	<context:annotation-config />
+	<context:component-scan base-package="org.devlaros" />
+
+<!-- Asi es como se agregan los bean para poder usarse con spring, es la forma de trabajr sin anoraciones pero comunemnte  no se trabaja asi -->
+<!-- <bean id="beanPruebaService" class="org.devlaros.webSpringProject.Service.PruebaServiceImpl"> </bean> -->
+
+<!-- Sirve para indicar y configrar el applciatin context , para que pueda hacer uso del configlproperties -->
+	<bean id="configProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath:config.properties</value>
+
+			</list>
+		</property>
+
+	</bean>
+
+
+
+</beans>

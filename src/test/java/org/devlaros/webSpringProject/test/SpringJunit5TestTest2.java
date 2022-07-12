@@ -22,6 +22,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @ContextConfiguration(locations = "classpath:applicationContextTest.xml")
 public class SpringJunit5TestTest2 {
 	
+//	De esta manera es como llmaria objetoa o clases de tipo Services o service impl para hacer sus pruebas
 	@Autowired
 	private PruebaService pruebaServiceImpl;
 

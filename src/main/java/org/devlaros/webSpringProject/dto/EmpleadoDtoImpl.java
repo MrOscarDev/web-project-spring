@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class EmpleadoDtoImpl implements EmpleadoDto {
 
+//	Metodo que creo apra hacer la prueba de inyeccion de beans con spring
 	@Override
 	public String consultarNombre() {
 		
